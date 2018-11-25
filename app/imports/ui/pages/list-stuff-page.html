@@ -1,5 +1,4 @@
 <template name="List_Stuff_Page">
-
     <div class="ui text container">
       {{#if Template.subscriptionsReady}}
         <table style="margin-top: 20px" class="ui celled table">
@@ -13,7 +12,6 @@
             <th>Edit</th>
           </tr>
           </thead>
-
           <tbody>
           {{#each friend in friendList}}
             <tr>
@@ -22,9 +20,11 @@
               <td>{{friend.address}}</td>
               <td>{{friend.phone}}</td>
               <td>{{friend.email}}</td>
-              {{#If_Logged_In}}
-                <td><a href="{{pathFor 'Edit_Stuff_Page' _id=friend._id}}">Edit</a></td>
-              {{/If_Logged_In}}
+            {{#if currentUser}}
+              <td><a href="{{pathFor 'Edit_Stuff_Page' _id=friend._id}}">Edit</a></td>
+            {{else}}
+              <td>Edit</td>
+            {{/if}}
             </tr>
           {{/each}}
           </tbody>
