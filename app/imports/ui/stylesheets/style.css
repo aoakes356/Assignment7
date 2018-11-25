@@ -1,0 +1,17 @@
+.banner-crop{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+.banner{
+  width: 100%;
+}
+.login-link-text{
+  color: white;
+}
+#bannerMenu{
+  margin-top: 0px;
+}
