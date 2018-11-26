@@ -8,10 +8,14 @@
 }
 .banner{
   width: 100%;
+  margin-top: -20%;
 }
 .login-link-text{
   color: white;
 }
 #bannerMenu{
   margin-top: 0px;
+}
+.form{
+  padding-top: 20px;
 }

@@ -1,4 +1,5 @@
 import { Mongo } from 'meteor/mongo';
+import { Meteor } from 'meteor/meteor';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 /* eslint-disable object-shorthand */
@@ -38,8 +39,9 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Friend',
+      group: 'Add Contact',
       placeholder: 'John',
+      type: '',
     },
   },
   last: {
@@ -48,7 +50,7 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Friend',
+      group: 'Add Contact',
       placeholder: 'Smith',
     },
   },
@@ -58,7 +60,7 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Friend',
+      group: 'Add Contact',
       placeholder: '123 Main st. City, State Zip',
     },
   },
@@ -68,7 +70,7 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Friend',
+      group: 'Add Contact',
       placeholder: 'Smith',
     },
   },
@@ -78,8 +80,17 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Friend',
+      group: 'Add Contact',
       placeholder: 'first.last@wsu.edu',
+    },
+  },
+  user: {
+    label: 'User',
+    type: String,
+    optional: false,
+    max: 100,
+    autoValue: function () {
+      return Meteor.userId();
     },
   },
 });
