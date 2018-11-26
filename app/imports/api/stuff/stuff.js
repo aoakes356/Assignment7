@@ -84,15 +84,6 @@ export const FriendSchema = new SimpleSchema({
       placeholder: 'first.last@wsu.edu',
     },
   },
-  user: {
-    label: 'User',
-    type: String,
-    optional: false,
-    max: 100,
-    autoValue: function () {
-      return Meteor.userId();
-    },
-  },
 });
 Stuff.attachSchema(StuffSchema);
 Friend.attachSchema(FriendSchema);
