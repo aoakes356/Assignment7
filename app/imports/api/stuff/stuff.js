@@ -39,9 +39,7 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Add Contact',
       placeholder: 'John',
-      type: '',
     },
   },
   last: {
@@ -50,7 +48,6 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Add Contact',
       placeholder: 'Smith',
     },
   },
@@ -60,7 +57,6 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Add Contact',
       placeholder: '123 Main st. City, State Zip',
     },
   },
@@ -70,7 +66,6 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Add Contact',
       placeholder: 'Smith',
     },
   },
@@ -80,7 +75,6 @@ export const FriendSchema = new SimpleSchema({
     optional: false,
     max: 25,
     autoform: {
-      group: 'Add Contact',
       placeholder: 'first.last@wsu.edu',
     },
   },

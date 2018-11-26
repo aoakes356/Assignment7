@@ -1,14 +1,16 @@
 <template name="Edit_Stuff_Page">
   {{#If_Logged_In}}
-    <div style="padding-top: 20px" class="ui text container">
-      {{> quickForm
-      collection=friendCollection
-      template="semanticUI"
-      id="EditFriendForm"
-      type="update"
-      doc=getDoc
-      buttonContent="Update"
-      }}
+    <div class="ui text container">
+      {{#autoForm collection=friendCollection template="semanticUI" id="EditFriendForm" type="update" doc=getDoc buttonContent="Update"}}
+        <h3>Edit Contact</h3>
+        <hr>
+        {{> afQuickField name='first'}}
+        {{> afQuickField name='last'}}
+        {{> afQuickField name='address'}}
+        {{> afQuickField name='phone'}}
+        {{> afQuickField name='email'}}
+        <button type="submit" class="ui button">Update</button>
+      {{/autoForm}}
     </div>
   {{/If_Logged_In}}
 </template>
